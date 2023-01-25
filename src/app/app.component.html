@@ -1,0 +1,33 @@
+<div
+  class="card-container"
+  [@wideNarrow]="isWide ? 'wide' : 'narrow'"
+  (@wideNarrow.start)="animationStart($event)"
+  (@wideNarrow.done)="animationDone($event)"
+  [@background]="isBackground ? 'background' : 'noBackground'"
+  *ngIf="isShown"
+  [@fadeInOut]
+>
+  <div class="icon-container">
+    <img
+      src="../assets/AngularLogo.png"
+      alt="Logo"
+      width="75px"
+      height="75px"
+    />
+  </div>
+  <h2>TheAngularGuy</h2>
+  <p>Angular animations tutorial</p>
+  <button class="card-btn">Subscribe :D</button>
+</div>
+
+<div>
+  <button class="toggle-animation-btn" (click)="toggleNormalAnimation()">
+    Toggle normal animation
+  </button>
+  <button class="toggle-animation-btn" (click)="toggleBackgroundAnimation()">
+    Toggle keyframes animation
+  </button>
+  <button class="toggle-animation-btn" (click)="toggleDOMChangeAnimation()">
+    Toggle DOM change animation
+  </button>
+</div>

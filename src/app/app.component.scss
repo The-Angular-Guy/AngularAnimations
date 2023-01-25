@@ -1,0 +1,55 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  .card-container {
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 2px 20px rgb(0 0 0 / 6%), 0 2px 4px rgb(0 0 0 / 7%);
+    min-width: 280px;
+
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      background-color: #f0eef8;
+      width: 100%;
+      height: 140px;
+    }
+
+    .card-btn {
+      margin-top: 2rem;
+      background-color: #441cff;
+      border: 0;
+      color: white;
+      width: 98%;
+      font-weight: bold;
+      border-radius: 20px;
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+
+  .toggle-animation-btn {
+    margin: 3rem 10px 0 10px;
+    background-color: white;
+    border: 1px solid #007bff;
+    color: #007bff;
+    width: 300px;
+    font-weight: bold;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.25s ease-out, color 0.2s ease-out;
+
+    &:hover {
+      background-color: #007bff;
+      color: white;
+    }
+  }
+}
